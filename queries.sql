@@ -49,11 +49,21 @@ SELECT * FROM animals;
 
 COMMIT;
 
--- queies
+-- project 2 queies
 
 SELECT COUNT(*) FROM animals;
 SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
 SELECT AVG(weight_kg) FROM animals;
-SELECT COUNT(escape_attempts) as count, neutered FROM animals GROUP BY neutered ORDER BY count DESC LIMIT 1;
+SELECT MAX(escape_attempts) as count, neutered FROM animals GROUP BY neutered ORDER BY count DESC LIMIT 1;
 SELECT MAX(weight_kg) as max_weight_in_kg, MIN(weight_kg) as min_weight_in_kg, species FROM animals GROUP BY species;
-SELECT AVG(escape_attempts) as average_escape_attempts, species FROM animals WHERE date_of_birth > '1990-01-01' AND date_of_birth < '2000-01-01' GROUP BY species;
+SELECT AVG(escape_attempts) as average_escape_attempts, species FROM animals WHERE date_of_birth >= '1990-01-01' AND date_of_birth <= '2000-01-01' GROUP BY species;
+--project 3
+
+SELECT a.name, o.full_name FROM animals as a INNER JOIN owners as o ON a.owners_id = o.id WHERE o.full_name = 'Melody Pond';
+
+SELECT animals.name, species.name as type FROM animals INNER JOIN species ON animals.species_id = species.id WHERE species.name = 'Pokemon';
+SELECT owners.full_name, owners.age, animals.name as animal_name, animals.date_of_birth as animal_dob, animals.weight_kg as animal_weight_kg FROM owners LEFT JOIN animals ON animals.owners_id = owners.id;
+SELECT species.name, count(*) FROM animals INNER JOIN species ON animals.species_id = species.id GROUP BY species.name;
+SELECT animals.name as animal_name, species.name as type, owners.full_name as owner FROM animals INNER JOIN species ON animals.species_id = species.id INNER JOIN owners ON animals.owners_id = owners.id WHERE species.name = 'Digimon' AND owners.full_name = 'Jennifer Orwell';
+SELECT animals.name as animal_name, owners.full_name as owner FROM animals INNER JOIN owners ON animals.owners_id = owners.id WHERE owners.full_name = 'Dean Winchester' AND animals.escape_attempts = 0;
+SELECT owners.full_name AS owner, COUNT(animals.id) AS animal_count FROM animals INNER JOIN owners ON animals.owners_id = owners.id GROUP BY owners.full_name HAVING COUNT(animals.id) = (SELECT MAX(animal_count) FROM (SELECT COUNT(id) AS animal_count FROM animals GROUP BY owners_id) AS subquery);
