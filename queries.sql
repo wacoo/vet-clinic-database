@@ -12,23 +12,32 @@ SELECT * FROM animals WHERE weight_kg >= 10.4 AND weight_kg <= 17.3;
 -- Update data
 BEGIN;
 UPDATE animals SET species='unspecified';
-SELECT * FROM animals;
+SELECT species FROM animals;
 ROLLBACK;
-SELECT * FROM animals;
+SELECT species FROM animals;
+
 
 UPDATE animals SET species='digimon' WHERE name LIKE '%mon';
 UPDATE animals SET species='pokemon' WHERE species IS NULL;
+SELECT species FROM animals;
+COMMIT;
+SELECT species FROM animals;
+
+-- delete all animals 
+BEGIN;
+DELETE FROM animals;
+SELECT * FROM animals;
+ROLLBACK;
 SELECT * FROM animals;
 COMMIT;
-
-
--- new transaction
+-- new transaction deleted animals born after jan first 2022
 BEGIN;
 DELETE FROM animals WHERE date_of_birth > '2022-01-01';
 SELECT * FROM animals;
 
 -- add savepoint
 SAVEPOINT sp1;
+
 
 UPDATE animals SET weight_kg= weight_kg * -1;
 
@@ -39,3 +48,12 @@ UPDATE animals SET weight_kg= weight_kg * -1 WHERE weight_kg < 0;
 SELECT * FROM animals;
 
 COMMIT;
+
+-- queies
+
+SELECT COUNT(*) FROM animals;
+SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
+SELECT AVG(weight_kg) FROM animals;
+SELECT COUNT(escape_attempts) as count, neutered FROM animals GROUP BY neutered ORDER BY count DESC LIMIT 1;
+SELECT MAX(weight_kg) as max_weight_in_kg, MIN(weight_kg) as min_weight_in_kg, species FROM animals GROUP BY species;
+SELECT AVG(escape_attempts) as average_escape_attempts, species FROM animals WHERE date_of_birth > '1990-01-01' AND date_of_birth < '2000-01-01' GROUP BY species;
