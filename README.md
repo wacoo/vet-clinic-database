@@ -40,7 +40,6 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -76,23 +75,18 @@ After you're finished please remove all the comments and instructions!
 
 <!-- Features -->
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Key Features <a name="key-features"></a>
 
 The database store the following data:
 
-- **[Animal name, DOB, weight, Species]**
-- **[Escape attepts]**
-- **[Health records]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-> Comming soon
-<!-- > Add a link to your deployed project. -->
-
-<!-- - [Live Demo Link](<replace-with-your-deployment-URL>) -->
+- **Tables: Animal name, DOB, weight, Species, Vets, Specializations, Visits**
+- **Escape attepts records**
+- **Health records**
+- **Visit records**
+- **Vet records**
+- **Speciality records**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +97,7 @@ The database store the following data:
 ### Prerequisites
 
 In order to run this project you need:
-- A web browser (Chrome, Firefox, Safari...)
+- PostgreSQL database installed
 <!--
 Example command:
 
@@ -117,10 +111,7 @@ Clone the repository to desired directory on local computer.
 > `git clone https://github.com/wacoo/vet-clinic-database`
 
 > `cd vet-clinic-database`
-
-> `npm install`
-
-> `npm start`
+> `run the SQL statements in the schema.sql, data.sql and queries.sql`
 
 ## 👥 Author <a name="authors"></a>
 - GitHub: [@wacoo](https://github.com/wacoo)
@@ -172,5 +163,13 @@ Feel free to check the [issues page](../../issues/).
 - **Can you give me a price range for your services?**
 
   - To get price range, please contact us with: wabaham9@gmail.com
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
