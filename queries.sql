@@ -78,3 +78,10 @@ SELECT animals.name AS animal_name, visits.date_of_visit AS date_of_visit FROM  
 SELECT animals.name AS animal_name, vets.name AS vet_name, visits.date_of_visit AS date_of_visit FROM  animals INNER JOIN visits ON animals.id = visits.animal_id INNER JOIN vets ON vets.id = visits.vet_id WHERE visits.date_of_visit = (SELECT MAX(date_of_visit) FROM visits);
 SELECT COUNT(*) AS no_of_visits_to_vet_with_no_speciality FROM vets INNER JOIN visits ON vets.id = visits.vet_id WHERE vets.id IN (SELECT v.id FROM vets AS v LEFT JOIN specializations AS s ON v.id = s.vet_id WHERE s.vet_id IS NULL);
 SELECT s.name AS speciality_name FROM (SELECT a.species_id, COUNT(*) AS visit_count FROM visits v JOIN animals a ON v.animal_id = a.id WHERE v.vet_id = (SELECT id FROM vets WHERE name = 'Maisy Smith') GROUP BY a.species_id ORDER BY visit_count DESC LIMIT 1) AS most_visited_species JOIN species s ON most_visited_species.species_id = s.id;
+
+
+-- proje 5
+
+SELECT COUNT(*) FROM visits where animal_id = 4;
+SELECT * FROM visits where vet_id = 2;
+SELECT * FROM owners where email = 'owner_18327@mail.com';

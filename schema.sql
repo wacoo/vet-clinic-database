@@ -58,6 +58,16 @@ CREATE TABLE specializations (
 CREATE TABLE visits (
     animal_id INT,
     vet_id INT,
-    date_of_visit DATE,
+    date_of_visit TIMESTAMP,
     PRIMARY KEY (animal_id, vet_id, date_of_visit)
 );
+
+-- project 5
+
+-- animal_id and vet_id columns in the visits table are part of the primary key, they are not the primary key.
+-- that means the non clustered index only works for the three columns as a whole, not for each column.
+-- That why it is necessary to index the each column is important.
+
+CREATE INDEX animal_id_idx ON visits(animal_id);
+CREATE INDEX vet_id_idx ON visits(vet_id);
+CREATE INDEX owners_email_idx ON owners(email);
