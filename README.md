@@ -1,8 +1,3 @@
-# curriculum-databases-projects-template
-
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
-
 
 ## Getting Started
 
@@ -45,14 +40,10 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -63,34 +54,20 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Vet Clinic Database <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+
+**Vet Clinic Database** is a PostgreSQL database designed to store information about animals in a veterinary clinic. It includes essential details such as animal names, dates of birth, weights, species, and records escape attempts. This database serves as a comprehensive repository for managing and tracking various aspects of animals' health and behavior within a veterinary clinic setting. With its structured data storage capabilities, the Vet Clinic Database enables efficient management and retrieval of animal information for effective veterinary care and administration.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+> 
 
 <details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
+  <summary>Database</summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
@@ -98,23 +75,18 @@ After you're finished please remove all the comments and instructions!
 
 <!-- Features -->
 
-### Key Features <a name="key-features"></a>
-
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
+### Key Features <a name="key-features"></a>
 
-## 🚀 Live Demo <a name="live-demo"></a>
+The database store the following data:
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](<replace-with-your-deployment-URL>)
+- **Tables: Animal name, DOB, weight, Species, Vets, Specializations, Visits**
+- **Escape attepts records**
+- **Health records**
+- **Visit records**
+- **Vet records**
+- **Speciality records**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,14 +94,10 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
-
 ### Prerequisites
 
 In order to run this project you need:
-
+- PostgreSQL database installed
 <!--
 Example command:
 
@@ -139,99 +107,24 @@ Example command:
  -->
 
 ### Setup
+Clone the repository to desired directory on local computer.
+> `git clone https://github.com/wacoo/vet-clinic-database`
 
-Clone this repository to your desired folder:
+> `cd vet-clinic-database`
+> `run the SQL statements in the schema.sql, data.sql and queries.sql`
 
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
-
-### Install
-
-Install this project with:
-
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
-
-### Usage
-
-To run the project, execute the following command:
-
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
-
-## 👥 Authors <a name="authors"></a>
-
-> Mention all of the collaborators of this project.
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+## 👥 Author <a name="authors"></a>
+- GitHub: [@wacoo](https://github.com/wacoo)
+- Twitter: [@wabaham9](https://twitter.com/wabaham9)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/wondmagegn-abriham-b867289a)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
-
+- Add more tables and relationships
+- Add more queries
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -248,35 +141,28 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+- We are freelance developers. If you like our work, please support us by spreading the word.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
+- This project is based on a template from Microverse full-stack web development school curriculum. You can find the template <a href="https://github.com/microverseinc/curriculum-template-databases">here</a>. Make sure you have access rights to the template.
+- I  want to thank all my clients for their patronage.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
 
-## ❓ FAQ <a name="faq"></a>
+## ❓ FAQ (OPTIONAL) <a name="faq"></a>
+- **How can I find you?**
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
+  - Please find my contact information below.
 
-- **[Question_1]**
+- **Can you give me a price range for your services?**
 
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
+  - To get price range, please contact us with: wabaham9@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -284,8 +170,6 @@ I would like to thank...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
